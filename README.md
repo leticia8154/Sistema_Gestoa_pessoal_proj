@@ -20,20 +20,30 @@ A solução foi construída utilizando o framework **Django** com a biblioteca *
 A organização das pastas e arquivos do projeto segue rigorosamente a estrutura abaixo:
 
 ```text
-gestao_financeira/                  # Raiz do repositório Git
+SISTEMA_GESTOA_PESSOAL_PROJ/
 │
-├── .gitignore                      # Arquivo para ignorar ambiente virtual e banco local
-├── README.md                       # Documentação e guia do projeto (Este arquivo)
-├── diagrama_dados.png              # Imagem do Diagrama de Dados exportado do Draw.io
-├── requirements.txt                # Arquivo com as dependências do projeto
+├── core/                       # Aplicativo principal do sistema (Receitas e Despesas)
+│   ├── migrations/             # Histórico de alterações do banco de dados
+│   │   ├── __init__.py         # Arquivo de inicialização das migrações
+│   │   └── 0001_initial.py     # Primeira migração que criou as tabelas
+│   ├── __init__.py
+│   ├── models.py               # Onde estão desenhadas as tabelas de Receita e Despesa
+│   ├── serializers.py          # Transformador de dados em JSON para a API
+│   ├── urls.py                 # Rotas internas do app core
+│   └── views.py                # Lógica do CRUD (ViewSets)
 │
-├── setup/                          # Diretório de configuração mãe do Django
-│   ├── settings.py                 # Configurações gerais e ativação dos módulos (DRF e Core)
-│   └── urls.py                     # Rota raiz do projeto que roteia para a API
+├── setup/                      # Pasta de configuração geral do Django
+│   ├── __init__.py             # Arquivo em branco criado para o Django ler a pasta
+│   ├── settings.py             # Configurações do projeto, banco e permissões
+│   ├── urls.py                 # Rotas principais e caminhos da API (/api/ e /admin/)
+│   └── wsgi.py                 # Configuração do servidor web criada manualmente
 │
-└── core/                           # Aplicativo (App) que gerencia as entidades financeiras
-    ├── models.py                   # CAMADA DE MODELS (Estrutura do Banco de Dados)
-    ├── serializers.py              # CAMADA DE SERIALIZERS (Validação e Conversão de Dados)
-    ├── views.py                    # CAMADA DE VIEWS (Lógica de Negócios e Controladores)
-    └── urls.py                     # CAMADA DE ROTAS/URLS (Endpoints da API)
+├── venv/                       # Ambiente virtual local instalado na sua máquina
+│
+├── .gitignore                  # Arquivo que avisa o Git para não subir a pasta venv
+├── db.sqlite3                  # Arquivo real do seu banco de dados local
+├── diagrama_dados.png          # Imagem de visualização do seu modelo de dados
+├── manage.py                   # O painel de controle do Django para rodar comandos
+├── README.md                   # Este arquivo de documentação com os links
+└── requirements.txt            # Lista de pacotes necessários (Django e Rest Framework)
 
