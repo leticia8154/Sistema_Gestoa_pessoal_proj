@@ -2,7 +2,16 @@
 
 Este repositório contém a arquitetura técnica e a implementação de uma **API REST** voltada para o controle e gestão de finanças pessoais. O projeto foi desenvolvido de forma individual como parte dos requisitos avaliativos do **Seminário de Sistemas**.
 
----
+
+
+## 🚀 Como Acessar a API Localmente
+
+Certifique-se de que o servidor está rodando (`python manage.py runserver`) e clique nos links abaixo para testar:
+
+* 📡 **[Acessar a Raiz da API](http://127.0.0.1:8000/api/)**
+* 💰 **[Gerenciar Receitas](http://127.0.0.1:8000/api/receitas/)**
+* 📉 **[Gerenciar Despesas](http://127.0.0.1:8000/api/despesas/)**
+* 🔐 **[Painel Administrativo do Django](http://127.0.0.1:8000/admin/)**
 
 ## 🏛️ Arquitetura e Estrutura do Projeto
 
@@ -27,3 +36,4 @@ gestao_financeira/                  # Raiz do repositório Git
     ├── serializers.py              # CAMADA DE SERIALIZERS (Validação e Conversão de Dados)
     ├── views.py                    # CAMADA DE VIEWS (Lógica de Negócios e Controladores)
     └── urls.py                     # CAMADA DE ROTAS/URLS (Endpoints da API)
+
