@@ -6,12 +6,12 @@ Este repositório contém a arquitetura técnica e a implementação de uma **AP
 
 ## 🚀 Como Acessar a API Localmente
 
-Certifique-se de que o servidor está rodando (`python manage.py runserver`) e clique nos links abaixo para testar:
+Certifique-se de que o servidor local está rodando (`python manage.py runserver`) no Git Bash e clique nos links abaixo para navegar no projeto:
 
-* 📡 **[Acessar a Raiz da API](http://127.0.0.1:8000/api/)**
-* 💰 **[Gerenciar Receitas](http://127.0.0.1:8000/api/receitas/)**
-* 📉 **[Gerenciar Despesas](http://127.0.0.1:8000/api/despesas/)**
-* 🔐 **[Painel Administrativo do Django](http://127.0.0.1:8000/admin/)**
+* 📡 **[Acessar a Raiz da API](http://127.0.0.1:8000/api/)** — Tela inicial do Django REST Framework que lista as tabelas disponíveis.
+* 💰 **[Gerenciar Receitas](http://127.0.0.1:8000/api/receitas/)** — Rota do CRUD onde é possível listar tudo (GET) e cadastrar novas receitas (POST).
+* 📉 **[Gerenciar Despesas](http://127.0.0.1:8000/api/despesas/)** — Rota do CRUD para o controle e inserção das despesas pessoais.
+* 🔐 **[Painel Administrativo do Django](http://127.0.0.1:8000/admin/)** — Interface visual completa para gerenciar o banco de dados (usuário: leticia).
 
 ## 🏛️ Arquitetura e Estrutura do Projeto
 
