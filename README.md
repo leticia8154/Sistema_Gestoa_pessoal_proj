@@ -13,6 +13,20 @@ Certifique-se de que o servidor local está rodando (`python manage.py runserver
 * 📉 **[Gerenciar Despesas](http://127.0.0.1:8000/api/despesas/)** — Rota do CRUD para o controle e inserção das despesas pessoais.
 * 🔐 **[Painel Administrativo do Django](http://127.0.0.1:8000/admin/)** — Interface visual completa para gerenciar o banco de dados (usuário: leticia).
 
+---
+
+### 🛠️ Como testar as operações de Editar (PUT) e Excluir (DELETE)
+
+Por padrão, a tela inicial do Django REST Framework exibe apenas a lista geral e o botão de criar (**POST**). Para liberar as demais funções do CRUD, siga os passos:
+
+1. Acesse a rota de receitas ou despesas e localize o **`id`** do item que deseja modificar (ex: `1`).
+2. Adicione o número do ID seguido de uma barra no final do link do navegador, ficando assim:
+   * **Para editar a receita 1:** `http://127.0.0.1:8000/api/receitas/1/`
+   * **Para editar a despesa 1:** `http://127.0.0.1:8000/api/despesas/1/`
+3. Nesta nova página individual:
+   * O formulário de baixo virá preenchido e exibirá o botão **PUT** para salvar as alterações (**Update**).
+   * No canto superior direito, surgirá o botão vermelho **DELETE** para apagar o registro (**Delete**).
+
 ## 🏛️ Arquitetura e Estrutura do Projeto
 
 A solução foi construída utilizando o framework **Django** com a biblioteca **Django REST Framework (DRF)**, seguindo o padrão de divisões em camadas exigido pela banca avaliadora. 
